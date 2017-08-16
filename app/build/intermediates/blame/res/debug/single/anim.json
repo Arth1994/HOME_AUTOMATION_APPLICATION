@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\anim\\abc_fade_out.xml"
+    }
+]

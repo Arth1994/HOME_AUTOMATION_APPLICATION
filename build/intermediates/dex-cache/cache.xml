@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Student\.android\build-cache\af79b173000b5ac478d86eb7949a4e62f590956a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Student\Downloads\Login\app\build\intermediates\pre-dexed\debug\classes_091fe0547ddb5874324d5b5c344a571d23489789.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Student\.android\build-cache\8d17a6240ebe61eb6b3ae26fa3e9913eec6c093c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Student\Downloads\Login\app\build\intermediates\pre-dexed\debug\classes_1bfd58f501f94802e475d0d41a4150e114a71db2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Student\.android\build-cache\af79b173000b5ac478d86eb7949a4e62f590956a\output\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Student\Downloads\Login\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_75a02c902f3dd40e7e541385c8473e7ee19f859f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Student\.android\build-cache\f0a0c6cfb9f893dd268199a29707c056bf3a17db\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Student\Downloads\Login\app\build\intermediates\pre-dexed\debug\classes_6019d0911b209042248591d355b7ac28f955d7f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Student\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Student\Downloads\Login\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_d9f5e6ad4ff6f1d44190d41714ce8654311348ec.jar" />
+    </item>
+
+</items>

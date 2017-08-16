@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.techblogon.loginexample.User_Manual">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+        Commands:-
+
+        1.Fan On/Fan Off
+        2.Kitchen
+        3.Hall
+        4.fire OFF
+        5.All ON/OFF
+        6.Bedroom
+        7.Motion OFF
+        8.Bedroom OFF
+
+ "
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+</LinearLayout>

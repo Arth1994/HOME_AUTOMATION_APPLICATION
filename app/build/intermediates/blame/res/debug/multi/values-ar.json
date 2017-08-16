@@ -1,0 +1,615 @@
+[
+    {
+        "outputFile": "C:\\Users\\Dell\\Downloads\\Login\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 116,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 116,
+                        "endOffset": 168
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 107,
+                    "endOffset": 325
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endColumn": 107,
+                        "endOffset": 276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 330,
+                    "endColumn": 122,
+                    "endOffset": 448
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 281,
+                        "endColumn": 122,
+                        "endOffset": 399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 453,
+                    "endColumn": 103,
+                    "endOffset": 552
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 404,
+                        "endColumn": 103,
+                        "endOffset": 503
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 557,
+                    "endColumn": 108,
+                    "endOffset": 661
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 508,
+                        "endColumn": 108,
+                        "endOffset": 612
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 666,
+                    "endColumn": 81,
+                    "endOffset": 743
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 617,
+                        "endColumn": 81,
+                        "endOffset": 694
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 748,
+                    "endColumn": 100,
+                    "endOffset": 844
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 699,
+                        "endColumn": 100,
+                        "endOffset": 795
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 849,
+                    "endColumn": 113,
+                    "endOffset": 958
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 800,
+                        "endColumn": 113,
+                        "endOffset": 909
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 963,
+                    "endColumn": 104,
+                    "endOffset": 1063
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 914,
+                        "endColumn": 104,
+                        "endOffset": 1014
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1068,
+                    "endColumn": 100,
+                    "endOffset": 1164
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1019,
+                        "endColumn": 100,
+                        "endOffset": 1115
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1169,
+                    "endColumn": 95,
+                    "endOffset": 1260
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1120,
+                        "endColumn": 95,
+                        "endOffset": 1211
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1265,
+                    "endColumn": 107,
+                    "endOffset": 1368
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1216,
+                        "endColumn": 107,
+                        "endOffset": 1319
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1373,
+                    "endColumn": 102,
+                    "endOffset": 1471
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1324,
+                        "endColumn": 102,
+                        "endOffset": 1422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1476,
+                    "endColumn": 102,
+                    "endOffset": 1574
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1427,
+                        "endColumn": 102,
+                        "endOffset": 1525
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1579,
+                    "endColumn": 118,
+                    "endOffset": 1693
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\9a6205de06ce3d9b56657a4fa2e52603f08815e0\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1530,
+                        "endColumn": 118,
+                        "endOffset": 1644
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1698,
+                    "endColumn": 105,
+                    "endOffset": 1799
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 101,
+                        "endOffset": 384
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1804,
+                    "endColumn": 175,
+                    "endOffset": 1975
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 385,
+                        "endColumn": 175,
+                        "endOffset": 560
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1980,
+                    "endColumn": 123,
+                    "endOffset": 2099
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 561,
+                        "endColumn": 119,
+                        "endOffset": 680
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2104,
+                    "endColumn": 106,
+                    "endOffset": 2206
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 681,
+                        "endColumn": 102,
+                        "endOffset": 783
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2211,
+                    "endColumn": 196,
+                    "endOffset": 2403
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 784,
+                        "endColumn": 196,
+                        "endOffset": 980
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2408,
+                    "endColumn": 129,
+                    "endOffset": 2533
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 981,
+                        "endColumn": 125,
+                        "endOffset": 1106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2538,
+                    "endColumn": 130,
+                    "endOffset": 2664
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1107,
+                        "endColumn": 126,
+                        "endOffset": 1233
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2669,
+                    "endColumn": 189,
+                    "endOffset": 2854
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\f62cc326489ce07d3775d3124f461b97e88cf148\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 189,
+                        "endOffset": 474
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2859,
+                    "endColumn": 195,
+                    "endOffset": 3050
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1234,
+                        "endColumn": 195,
+                        "endOffset": 1429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 3055,
+                    "endColumn": 105,
+                    "endOffset": 3156
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1430,
+                        "endColumn": 101,
+                        "endOffset": 1531
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 3161,
+                    "endColumn": 180,
+                    "endOffset": 3337
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1532,
+                        "endColumn": 180,
+                        "endOffset": 1712
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 3342,
+                    "endColumn": 123,
+                    "endOffset": 3461
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1713,
+                        "endColumn": 119,
+                        "endOffset": 1832
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 3466,
+                    "endColumn": 197,
+                    "endOffset": 3659
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1833,
+                        "endColumn": 197,
+                        "endOffset": 2030
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 3664,
+                    "endColumn": 175,
+                    "endOffset": 3835
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 2031,
+                        "endColumn": 171,
+                        "endOffset": 2202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3840,
+                    "endColumn": 93,
+                    "endOffset": 3929
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2203,
+                        "endColumn": 89,
+                        "endOffset": 2292
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3934,
+                    "endColumn": 95,
+                    "endOffset": 4025
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2293,
+                        "endColumn": 91,
+                        "endOffset": 2384
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 4030,
+                    "endColumn": 112,
+                    "endOffset": 4138
+                },
+                "from": {
+                    "file": "C:\\Users\\Dell\\.android\\build-cache\\832665f83a21d099a4adefcab7f78058819afa23\\output\\res\\values-ar\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2385,
+                        "endColumn": 108,
+                        "endOffset": 2493
+                    }
+                }
+            }
+        ]
+    }
+]

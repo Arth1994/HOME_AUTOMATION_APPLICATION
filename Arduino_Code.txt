@@ -1,0 +1,447 @@
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(3, 4);
+int sensor = A1;
+float temp_read, Temp_alert_val, Temp_shut_val;
+int sensor_value; //variable to hold read sensor value
+int sms_count = 0, Fire_Set;
+int PIR = 2; //The output of PIR sensor connected to pin 7
+#define LED1 12
+#define LED2 13
+//int LED2 = ; // buzzer connected at pin 8
+
+
+int state1 = LOW;
+int state2 = LOW;
+int state3 = LOW;
+int state4 = LOW;
+int state7 = LOW;
+int state8 = LOW;
+int flag1 = LOW;
+int flag2 = LOW;
+int flag3 = LOW;
+int flag4 = LOW;
+String msg = "";
+String w = "FAN OFF";
+String x = "KITCHEN OFF";
+String y = "HALL OFF";
+String z = " BEDROOM OFF";
+String data = "";
+String phoneNumber = "";
+boolean alreadyRun = false;
+String recMsg = "";
+String a = " has been turned on for over ";
+String b = " seconds. Reply with '";
+String c = " OFF' to turn it off.";
+String d = " has been turned off.";
+
+
+
+class Relayy
+{
+    // Class Member Variables
+    // These are initialized at startup
+    int ledPin;      // the number of the LED pin
+    long OnTime;     // milliseconds of on-time
+    //long OffTime;    // milliseconds of off-time
+    //boolean pinState;
+
+    // These maintain the current state
+    int ledState;                 // ledState used to set the LED
+    unsigned long previousMillis;   // will store last time LED was updated
+
+    // Constructor - creates a Flasher
+    // and initializes the member variables and state.......
+
+
+  public:
+    Relayy(int pin, long on)
+    {
+      ledPin = pin;
+      pinMode(ledPin, OUTPUT);
+
+      OnTime = on;
+      //OffTime = off;
+
+      ledState = LOW;
+      previousMillis = 0;
+    }
+
+    void Output(boolean pinState)
+    {
+      ledState = pinState;
+      digitalWrite(ledPin, ledState);  // Update the actual LED
+      Serial.println(ledPin + " turned " + ledState);
+
+    }
+    int Update()
+    {
+      // check to see if it's time to change the state of the LED
+
+      unsigned long currentMillis = millis();
+
+
+      if ((ledState == HIGH) && (currentMillis - previousMillis >= OnTime))
+      {
+        //ledState = LOW;  // Turn it off
+        mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+        delay(1000);  // Delay of 1000 milli seconds or 1 second
+        mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+        delay(1000);
+        if (ledPin == 5)
+        {
+          msg = "FAN";
+        }
+        else if (ledPin == 6)
+        {
+          msg = "KITCHEN";
+        }
+        else if (ledPin == 7)
+        {
+          msg = "HALL";
+        }
+        else if (ledPin == 8)
+        {
+          msg = "BEDROOM";
+        }
+        mySerial.println(msg + a + (OnTime/1000) + b + msg + c);// The SMS text you want to send
+        delay(100);
+        mySerial.println((char)26);// ASCII code of CTRL+Z
+        delay(2000);
+        mySerial.println("AT+CNMI=2,2,0,0,0"); // AT Command to recieve a live SMS
+        if (mySerial.available() > 0)
+        {
+          recMsg = mySerial.readString();
+          if (recMsg.equalsIgnoreCase(w))
+          {
+            digitalWrite(ledPin, LOW);
+            mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+            delay(1000);
+            mySerial.println(ledPin + d);// The SMS text you want to send
+            delay(1000);
+            mySerial.println((char)26);// ASCII code of CTRL+Z
+            delay(2000);
+          }
+          else if (recMsg.equalsIgnoreCase(x))
+          {
+            digitalWrite(ledPin, LOW);
+            mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+            delay(1000);
+            mySerial.println(ledPin + d);// The SMS text you want to send
+            delay(1000);
+            mySerial.println((char)26);// ASCII code of CTRL+Z
+            delay(2000);
+          }
+          else if (recMsg.equalsIgnoreCase(y))
+          {
+            digitalWrite(ledPin, LOW);
+            mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+            delay(1000);
+            mySerial.println(ledPin + d);// The SMS text you want to send
+            delay(1000);
+            mySerial.println((char)26);// ASCII code of CTRL+Z
+            delay(2000);
+          }
+          else if (recMsg.equalsIgnoreCase(z))
+          {
+            digitalWrite(ledPin, LOW);
+            mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+            delay(1000);
+            mySerial.println(ledPin + d);// The SMS text you want to send
+            delay(1000);
+            mySerial.println((char)26);// ASCII code of CTRL+Z
+            delay(2000);
+          }
+        }
+        previousMillis = currentMillis;  // Remember the time
+        //digitalWrite(ledPin, ledState);  // Update the actual LED
+        return LOW;
+      }
+      return HIGH;
+
+    }
+    void CheckFire()
+    {
+      //lcd.setCursor(0, 0);
+      //lcd.print("Fire Scan - ON");
+      digitalWrite(LED1, HIGH);
+      Serial.println("FIRE SCAN - ON");
+      Temp_alert_val = CheckTemp();
+      if (Temp_alert_val > 45)
+      {
+        digitalWrite(LED2, HIGH);
+        digitalWrite(ledPin, HIGH);
+        SetAlert(); // Function to send SMS Alerts
+      }
+
+    }
+
+    float CheckTemp()
+    {
+      temp_read = analogRead(sensor); // reads the sensor output (Vout of LM35)
+      temp_read = temp_read * 5; // converts the sensor reading to temperature
+      temp_read = temp_read / 10; // adds the decimal point
+      return temp_read; // returns temperature value in degree celsius
+    }
+
+    void SetAlert()
+    {
+      while (sms_count < 3) //Number of SMS Alerts to be sent
+      {
+        SendTextMessage(); // Function to send AT Commands to GSM module
+      }
+      Fire_Set = 1;
+      //lcd.setCursor(0, 1);
+      Serial.println("Fire Alert! SMS Sent!");
+    }
+    void CheckShutDown()
+    {
+      if (Fire_Set == 1)
+      {
+
+        Temp_shut_val = CheckTemp();
+        if (Temp_shut_val < 28)
+        {
+          //lcd.setCursor(0, 1);
+          digitalWrite(LED2, LOW);
+          digitalWrite(ledPin, LOW);
+          Serial.println("Fire Shut! SAFE NOW");
+          sms_count = 0;
+          Fire_Set = 0;
+        }
+        if (Serial.available() > 0)
+        {
+          if (Serial.readString() == "10")
+          {
+            //digitalWrite(LED2, LOW);
+            digitalWrite(ledPin, LOW);
+            //Serial.println("Fire Shut! SAFE NOW");
+            //sms_count = 0;
+            //Fire_Set = 0;
+          }
+        }
+      }
+    }
+
+    void SendTextMessage()
+    {
+      mySerial.println("AT+CMGF=1");    //To send SMS in Text Mode
+      delay(2000);
+      mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+      delay(2000);
+      mySerial.println("Fire in NEW ROOM!");//the content of the message
+      delay(200);
+      mySerial.println((char)26);//the stopping character
+      delay(5000);
+      sms_count++;
+    }
+    void Check_Burglar()
+    {
+      sensor_value = digitalRead(PIR); // Reading sensor value from pin 7
+      if (sensor_value == HIGH) // Checking if PIR sensor sends a HIGH signal to Arduino
+      {
+        digitalWrite(ledPin, HIGH); // Activating the buzzer
+        while (sms_count < 3) //Number of SMS Alerts to be sent limited at 3
+        {
+          SendTextMessage1(); // Function to send AT Commands to GSM module
+        }
+      }
+    }
+
+    void Check_Reset()
+    {
+      if (Serial.available() > 0) // Checking if pushbutton was pressed
+      {
+        if (Serial.readString() == "12")
+        {
+          digitalWrite(ledPin, LOW); // turning OFF the buzzer
+          sms_count = 0; // Reactivating the SMS Alert Facility
+        }
+      }
+    }
+
+    void SendTextMessage1()
+    {
+      mySerial.println("AT+CMGF=1");    //To send SMS in Text Mode
+      delay(1000);
+      mySerial.println("AT+CMGS=\"+91" + phoneNumber + "\"\r"); // Replace x with mobile number
+      delay(1000);
+      mySerial.println("Intruder in the house!");//the content of the message
+      delay(200);
+      mySerial.println((char)26);//the stopping character
+      delay(1000);
+      sms_count++;
+    }
+
+};
+
+Relayy led1(5, 30000); //milliseconds
+Relayy led2(6, 60000);
+Relayy led3(7, 90000);
+Relayy led4(8, 120000);
+Relayy led5(9, 22000);
+Relayy led6(10, 24000);
+Relayy led7(11, 26000);
+
+void setup()
+{
+  pinMode(sensor, INPUT);
+  pinMode(PIR, INPUT); // configuring pin 7 as Input
+  //pinMode(push_switch,INPUT); // configuring pin 6 as Input
+  //  pinMode(buzzer, OUTPUT); // configuring pin 8 as OUTPUT
+
+  mySerial.begin(9600);   // Setting the baud rate of GSM Module
+  Serial.begin(9600);         //Sets the data rate in bits per second (baud) for serial data transmission
+  Serial.println("Hi from UNO");
+}
+void loop()
+{
+  if ( alreadyRun == false)
+  {
+    if (Serial.available() > 0)
+    {
+      phoneNumber = Serial.readString();
+      Serial.println(phoneNumber);
+      if (phoneNumber.equals(""))
+      {
+        alreadyRun = false;
+      }
+      else
+      {
+        alreadyRun = true;
+      }
+    }
+  }
+  //Serial.println(phoneNumber);
+  while (alreadyRun == true)
+  {
+    if (Serial.available() > 0)
+    {
+      data = Serial.readString();      //Read the incoming data and store it into variable data
+      Serial.println(data);        //Print Value inside data in Serial monitor
+      if (data == "1" )           //Checks whether value of data is equal to 1
+      {
+        state1 = HIGH;
+        led1.Output(state1);
+        Serial.println("Fan On");
+        flag1 = HIGH;
+      }
+      else if (data == "2")
+      {
+        state1 = LOW;
+        led1.Output(state1);
+        Serial.println("Fan Off");
+        flag1 = LOW;
+      }
+      else if (data == "3")
+      {
+        state2 = HIGH;
+        led2.Output(state2);
+        Serial.println("Kitchen On");
+        flag2 = 1;
+      }
+      else if (data == "4")
+      {
+        state2 = LOW;
+        led2.Output(state2);
+        Serial.println("Kitchen Off");
+        flag2 = LOW;
+      }
+      else if (data == "5")
+      {
+        state3 = HIGH;
+        led3.Output(state3);
+        Serial.println("Hall On");
+        flag3 = HIGH;
+      }
+      else if (data == "6")
+      {
+        state3 = LOW;
+        led3.Output(state3);
+        Serial.println("Hall On");
+        flag3 = LOW;
+      }
+      else if (data == "7")
+      {
+        state4 = HIGH;
+        led4.Output(state4);
+        flag4 = HIGH;
+      }
+      else if (data == "8")
+      {
+        state4 = LOW;
+        led4.Output(state4);
+        flag4 = LOW;
+      }
+      else if (data == "13") //Guest
+      {
+        state7 = HIGH;
+        led7.Output(state7);
+        //flag7 = HIGH;
+      }
+      else if (data == "14") //Open
+      {
+        state7 = LOW;
+        led7.Output(state7);
+        //flag7 = LOW;
+      }
+      else if (data == "15")
+      {
+        state8 = HIGH;
+        led1.Output(state8);
+        delay(1000);
+        led2.Output(state8);
+        delay(1000);
+        led3.Output(state8);
+        delay(1000);
+        led4.Output(state8);
+        delay(1000);
+        led5.Output(state8);
+        delay(1000);
+        led6.Output(state8);
+        delay(1000);
+        // flag8 = HIGH;
+      }
+      else if (data == "16")
+      {
+        state8 = LOW;
+        led1.Output(state8);
+        delay(1000);
+        led2.Output(state8);
+        delay(1000);
+        led3.Output(state8);
+        delay(1000);
+        led4.Output(state8);
+        delay(1000);
+        led5.Output(state8);
+        delay(1000);
+        led6.Output(state8);
+        delay(1000);
+        //flag8 = LOW;
+      }
+
+    }
+    if (flag1 == HIGH)
+    {
+      flag1 = led1.Update();
+    }
+    if (flag2 == HIGH)
+    {
+      flag2 = led2.Update();
+    }
+    if (flag3 == HIGH)
+    {
+      flag3 = led3.Update();
+    }
+    if (flag4 == HIGH);
+    {
+      flag4 = led4.Update();
+    }
+
+    led5.CheckFire();
+    led6.Check_Burglar();// subroutine to check sensor status and activation of outputs
+    led5.CheckShutDown();
+    led6.Check_Reset(); // subroutine to check if alarm reset switch pressed or not
+
+  }
+}
